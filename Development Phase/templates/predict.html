@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Predict Page</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/81fd5e3127.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-image: url('https://cdn.inc42.com/wp-content/uploads/2022/12/PCI-Feature-760x570.png');
+            background-size: cover;
+        }
+
+        .head {
+            padding: 1%;
+        }
+
+        .container-fluid {
+            padding: 1%;
+        }
+
+        .info {
+            padding: 1%;
+            font-size: 15px;
+            color: rgb(6, 6, 48);
+        }
+
+        p {
+            font-weight: bolder;
+            margin: 0px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="head">Online Payments Fraud Detection</h1>
+    <div class="container-fluid">
+        <form class="info" action="/submit" method="post">
+            <p>Step</p>
+            <input type="text" id="step" name="step" placeholder="represent a unit of time" required><br><br>
+            <p>Type</p>
+            <input type="text" id="type" name="type" placeholder="type of online transaction" required><br><br>
+            <p>Amount</p>
+            <input type="text" id="amount" name="amount" placeholder="the amount of the transaction" required><br><br>
+            <p>OldbalanceOrg</p>
+            <input type="text" id="oldbalanceOrg" name="oldbalanceOrg" placeholder="balance before the transaction" required><br><br>
+            <p>NewbalanceOrig</p>
+            <input type="text" id="newbalanceOrig" name="newbalanceOrig" placeholder="balance after the transaction" required><br><br>
+            <p>OldbalanceDest</p>
+            <input type="text" id="oldbalanceDest" name="oldbalanceDest"
+                placeholder="initial balance of the recipient before the transaction" required><br><br>
+            <p>NewbalanceDest</p>
+            <input type="text" id="newbalanceDest" name="newbalanceDest"
+                placeholder="the new balance of the recipient after the transaction" required><br><br>
+
+            <center>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </center>
+        </form>
+    </div>
+</body>
+
+</html>
